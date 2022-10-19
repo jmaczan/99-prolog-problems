@@ -1,4 +1,4 @@
-# Solutions to `99 Prolog Problems`
+# Solutions to [`99 Prolog Problems`](https://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/)
 
 In progress. All in file [`problems.pl`](problems.pl)
 

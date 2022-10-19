@@ -42,3 +42,25 @@ This solution is able to do both; I think it's because an order of predicates in
 another_list_length([], 0).
 another_list_length([H|T], N) :- another_list_length(T, M), N is M + 1.
 
+/*
+P05 (*) Reverse a list.
+*/
+/*
+L1 = [1, 2, 3] L2 = N
+reverse_list_internal([1, 2, 3], N, [])
+| H = 1, T = [2, 3], L2 = N, Acc = []
+reverse_list_internal([2, 3], N, [1])
+| H' = 2, T' = [3], L2' = L2, Acc = [1]
+reverse_list_internal([3], L2', [2|[1]])
+| H'' = 3, T'' = [], L2'' = L2', Acc = [2, 1]
+reverse_list_internal([], L2'', [3, 2, 1])
+| reverse_list_internal([], L2, L2)
+L2 = L2''
+L2 = [3, 2, 1]
+|
+[3, 2, 1]
+*/
+reverse_list(L1, L2) :- reverse_list_internal(L1, L2, []).
+
+reverse_list_internal([], L2, L2).
+reverse_list_internal([H|T], L2, Acc) :- reverse_list_internal(T, L2, [H|Acc]).
