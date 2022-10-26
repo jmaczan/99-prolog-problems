@@ -64,3 +64,9 @@ reverse_list(L1, L2) :- reverse_list_internal(L1, L2, []).
 
 reverse_list_internal([], L2, L2).
 reverse_list_internal([H|T], L2, Acc) :- reverse_list_internal(T, L2, [H|Acc]).
+
+/*
+P06 (*) Find out whether a list is a palindrome.
+    A palindrome can be read forward or backward; e.g. [x,a,m,a,x].
+*/
+is_palindrome([], ).
